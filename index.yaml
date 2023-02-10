@@ -3,12 +3,12 @@ entries:
   nginx-demo:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-02-10T11:05:13.173534+08:00"
+    created: "2023-02-10T14:21:32.792699+08:00"
     description: A Helm chart for Kubernetes
     digest: 84ca10b8ccb1a01d33efbf66b3b016bf10753428156bb9407d581307972e0085
     name: nginx-demo
     type: application
     urls:
-    - https://github.com/chris-addo/helm-charts/nginx-demo-0.1.0.tgz
+    - https://chris-addo.github.io/helm-charts/nginx-demo-0.1.0.tgz
     version: 0.1.0
-generated: "2023-02-10T11:05:13.17284+08:00"
+generated: "2023-02-10T14:21:32.792017+08:00"

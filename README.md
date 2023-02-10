@@ -28,11 +28,14 @@ helm lint chart-sources/*
 ```shell
 helm package chart-sources/nginx-demo
 ```
+## Configure the “helm-chart” repository as a GitHub pages site
+Go to GitHub repository -> settings -> GitHub Pages
 
 ## Create the helm chart repository index
 > A repository is characterized primarily by the presence of a special file called index.yaml that has a list of all of the packages supplied by the repository, together with metadata that allows retrieving and verifying those packages.
 ```shell
-helm repo index --url https://github.com/chris-addo/helm-charts/ .
+# The URL is your github page URL, is not github repo URL
+helm repo index --url https://chris-addo.github.io/helm-charts/ .
 ```
 
 ## Push your charts to Github
@@ -40,11 +43,8 @@ helm repo index --url https://github.com/chris-addo/helm-charts/ .
 git add . && git commit -m "Initial commit" && git push origin master
 ```
 
-## Configure the “helm-chart” repository as a Github pages site
-Go to GitHub repository -> settings -> GitHub Pages
-
 ## Add new charts to an existing repository
 > Whenever you need to add a new chart to the Helm chart repository, it’s mandatory for you to regenerate the index.yaml file. The $ helm repo index command will completely rebuild the index.yaml file from scratch, including only the charts that it finds locally, which very likely is our case. However, it worth notice that you can use the --merge flag to incrementally add new charts to an existing index.yaml
 ```shell
-helm repo index --url https://github.com/chris-addo/helm-charts/ --merge index.html .
+helm repo index --url https://chris-addo.github.io/helm-charts/ --merge index.html .
 ```
